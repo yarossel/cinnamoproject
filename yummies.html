@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummies</title>
+    <link rel="stylesheet" href="styles/yummie-style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li onclick="toHome()">Hello!</li>
+            <li id="open-yummies">Yummies</li>
+            <li>Change Theme</li>
+            <li>Language</li>
+            <li>My Works</li>
+            <li id="open-signup-popup">Sign Up</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="grid-container">
+            <button class="add-new">Add New</button>
+            <div class="card">
+                <div class="card-title"><h2 class="title">your-title</h2></div>
+                <div class="card-body">
+                    <img src="images/ute.jpg" alt="yummie">
+                </div>
+                <div class="card-footer">
+                    <div class="vector-reply"></div>
+                    <div class="vector-star"></div>
+                    <div class="vector-heart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <div class="header">
+                <h1 class="title">Sign Up</h1>
+                <button class="close" id="closeBtn">X</button>
+            </div>
+            <form class="body" id="form">
+                <input class="textarea" type="email" placeholder="example@gmail.com">
+                <input class="textarea" type="password" placeholder="password">
+                <input type="submit" class="sign-up" value="Sign Up">
+                <button class="log-in">Log In</button>
+            </form>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

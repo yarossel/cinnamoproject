@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="ul-1">
+            <li onclick="toHome()">Hello!</li>
+            <li id="open-yummies" onclick="toYummies()">Yummies</li>
+            <li>Change Theme</li>
+        </ul>
+        <ul class="ul-2">
+            <li>Language</li>
+            <li>My Works</li>
+            <li id="open-signup-popup">Sign Up</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="popup" id="popup">
+            <div class="header">
+                <h1 class="title">Sign Up</h1>
+                <button class="close" id="closeBtn">X</button>
+            </div>
+            <form class="body" id="form">
+                <input class="textarea" type="email" placeholder="example@gmail.com">
+                <input class="textarea" type="password" placeholder="password">
+                <input type="submit" class="sign-up" value="Sign Up">
+                <button class="log-in">Log In</button>
+            </form>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

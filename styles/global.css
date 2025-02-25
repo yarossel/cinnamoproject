@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #8DBCFF;
+    --text-shadow: #5B9FFF;
+    --text-color: #488BFF;
+    --nav-shadow: #ACECFF;
+    --placeholder: #A4ADBB;
+    --bg-color: #F4FBFF;
+    --card-color: #CAEEFF;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, p, ol, figcaption, blockquote {
+    margin: 0;
+    padding: 0;
+}
