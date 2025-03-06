@@ -99,6 +99,7 @@ li:active {
 
 .card .card-footer .flex-vectors {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 

@@ -1,17 +1,18 @@
 @import url('global-popup.css');
 
 .popup {
-    height: 63%;
-    width: 20%;
+    height: 600px;
+    width: 400px;
 }
 
 .header {
+    position: relative;
     margin: 40px 20px;
 }
 
 .close {
-    top: 5%;
-    left:84%;
+    top: 0;
+    right: -30px;
 }
 
 .body {

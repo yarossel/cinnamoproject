@@ -54,7 +54,7 @@ editForm.addEventListener('submit', (evt) => {
     const titleValue = userTitle.value.trim();
     const urlValue = userUrl.value.trim();
 
-    if (titleValue !== '' || urlValue !== '') {
+    if (titleValue !== '' && urlValue !== '') {
         const card = cardTemplate.cloneNode(true);
         card.querySelector('.title').innerHTML = titleValue;
         card.querySelector('.card-body').innerHTML = `<img src="${urlValue}" alt="${titleValue}">`;
@@ -65,8 +65,8 @@ editForm.addEventListener('submit', (evt) => {
 })
 
 container.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('.trash')) {
-        console.log(evt.target);
+    const trash = evt.target.closest('.trash');
+    if (trash) {
         const item = evt.target.closest('.card');
         item.remove();
     }
