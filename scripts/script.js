@@ -3,10 +3,9 @@ const popup = document.querySelector('#popup');
 const closeBtn = document.querySelector('#closeBtn');
 const overlay = document.querySelector('.overlay');
 const form = document.querySelector('#form');
-const openYummies = document.querySelector('#open-yummies');
 
-const closeAll = (popup, overlay) => {
-    popup.style.display = 'none';
+const closeAll = (pop, overlay) => {
+    pop.style.display = 'none';
     overlay.style.opacity = '0';
     overlay.style.zIndex = '0';
     overlay.style.display = 'none';
@@ -48,6 +47,8 @@ const toYummies = () => {
 const toHome = () => {
     window.location.href = 'index.html'
 }
+
+
 
 
 
