@@ -5,30 +5,39 @@ const overlay = document.querySelector('.overlay');
 const form = document.querySelector('#form');
 const openYummies = document.querySelector('#open-yummies');
 
+const closeAll = (popup, overlay) => {
+    popup.style.display = 'none';
+    overlay.style.opacity = '0';
+    overlay.style.zIndex = '0';
+    overlay.style.display = 'none';
+    return 'done';
+}
+
 openBtn.addEventListener('click', () => {
     popup.style.display = 'block';
-
+    overlay.style.opacity = '100%';
+    overlay.style.zIndex = '1';
+    overlay.style.display = 'block';
 });
 
 closeBtn.addEventListener('click', () => {
-    popup.style.display = 'none';
-
+    closeAll(popup, overlay);
 })
 
 form.addEventListener('submit', (evt) => {
     evt.preventDefault();
-    popup.style.display = 'none';
+    closeAll(popup, overlay);
 })
 
 document.addEventListener('mousedown', (evt) => {
     if(evt.target.closest('.popup') === null){
-        popup.style.display = 'none';
+        closeAll(popup, overlay);
     }
 })
 
 document.addEventListener('keydown', function (evt) {
     if (evt.code == 'Escape') {
-        popup.style.display = 'none';
+        closeAll(popup, overlay);
     }
 })
 

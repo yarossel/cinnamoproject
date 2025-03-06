@@ -1,0 +1,25 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <title>bin, trash, environment, earth day, pixel, digital, sign, art, nft</title>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="514" width="514" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <rect id="svg_2" height="192" width="24" y="232" x="208"/>
+   <rect id="svg_3" height="192" width="24" y="232" x="136"/>
+   <rect id="svg_4" height="192" width="24" y="232" x="280"/>
+   <rect id="svg_5" height="192" width="24" y="232" x="352"/>
+   <rect id="svg_6" height="24" width="24" y="448" x="88"/>
+   <rect id="svg_7" height="24" width="24" y="448" x="400"/>
+   <rect id="svg_8" height="24" width="288" y="472" x="112"/>
+   <polygon id="svg_9" points="64 160 64 448 88 448 88 184 424 184 424 448 448 448 448 160 64 160"/>
+   <rect id="svg_10" height="48" width="24" y="112" x="40"/>
+   <polygon id="svg_11" points="448 112 448 88 328 88 328 40 304 40 304 88 208 88 208 40 184 40 184 88 64 88 64 112 448 112"/>
+   <rect id="svg_12" height="48" width="24" y="112" x="448"/>
+   <rect id="svg_13" height="24" width="96" y="16" x="208"/>
+  </g>
+ </g>
+</svg>
