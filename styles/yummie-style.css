@@ -1,9 +1,5 @@
 @import url('global.css');
-
-@font-face {
-    font-family: Monocraft;
-    src: url('../fonts/Monocraft.woff');
-}
+@import url('popup.css');
 
 body {
     background-color: var(--bg-color);
@@ -11,102 +7,32 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: Monocraft;
     font-size: 25px;
 }
 
-.grid-container {
-    display: grid;
-    grid-auto-columns: max-content;
-}
-
-.add-new {
-    font-size: 50px;
-    color: var(--text-color);
-    background-color: transparent;
-}
-
-.add-new:hover {
-    font-size: 55px;
-    text-shadow: 0 0 10px var(--text-shadow);
-}
-
-.card {
-    max-width: 400px;
-    max-height: 700px;
-    background-color: var(--card-color);
-    border-radius: 10px;
-    transition: all .5s cubic-bezier(0, 0, 0.17, 1.67);
-}
-
-.card:has(img:hover) {
-    transform: scale(1.2);
-}
-
-body:has(.card-body:hover) {
-    filter: blur(4px);
-}
-
-img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-h2 {
-    font-size: 25px;
-    user-select: none;
-    color: var(--text-color);
-}
-
-/* .vector-reply {
-    position: absolute;
-    left: 15.5%;
-    right: 15.28%;
-    top: 17.32%;
-    bottom: 15.63%;
-    border: 1px solid var(--text-color);
-}
-
-.vector-star {
-    position: absolute;
-    left: 8.33%;
-    right: 8.33%;
-    top: 8.33%;
-    bottom: 8.33%;
-    border: 1.5px solid var(--text-color);
-}
-
-.vector-heart {
-    position: absolute;
-    left: 5.21%;
-    right: 5.21%;
-    top: 10.56%;
-    bottom: 11.45%;
-    background: 1.5px solid var(--text-color);
-} */
-
 nav {
     display: flex;
-    justify-content: center;
-    gap: 10%;
+    gap: 100%;
 }
 
 ul {
-    position: relative;
-    height: 70px;
-    width: 100%;
-    background-color: white;
-    margin: 0;
+    position: fixed;
+    height: 100%;
+    width: 3%;
     padding: 0;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 5%;
+    gap: 10%;
+    background: white;
     list-style-type: none;
     color: var(--text-color);
-    border-bottom: 5px solid var(--nav-shadow);
+    border-right: 5px solid var(--nav-shadow);
 }
 
 li {
@@ -124,130 +50,45 @@ li:active {
     transform: scale(1);
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    height: 63%;
-    width: 20%;
-    overflow: hidden;
-    background-color: white;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    border: 5px solid var(--blue);
-    box-shadow: 8px 8px 0 var(--blue);
-    font-family: Monocraft;
-    transition: all .3s cubic-bezier(0.07, 0.61, 0.39, 1.69);
+.grid-container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+    column-count: 4;
 }
 
-.header {
-    margin: 40px 20px;
+.add-new {
+    color: var(--text-color);
+    background-color: transparent;
 }
 
-h1 {
-    user-select: none;
-    margin: 0;
-    color: var(--text-shadow);
-    font-size: 45px;
-}
-
-.close {
-    position: absolute;
-    top: 5%;
-    left:84%;
-    font-size: 40px;
-    width: 80px;
-    height: 50px;
-    border-radius: 5px;
-    color: white;
-    background-color: var(--blue);
-}
-
-.close:hover {
-    transform: scale(1.2);
-}
-
-.close:active {
-    transform: scale(1);
-}
-
-.body {
+.card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-height: 600px;
+    break-inside: avoid;
+    margin-bottom: 10%;
+    height: auto;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px var(--blue);
+    transition: all .5s cubic-bezier(0, 0, 0.17, 1.67);
 }
 
-.textarea {
-    margin: 20px 25px;
-    height: 70px;
-    max-width: 85%;
-    border: 2px solid var(--text-shadow);
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 10px;
-    font-family: Monocraft;
-    font-size: 30px;
-    color: var(--text-color);
-    box-shadow: 0 0 10px rgba(91, 159, 255, 0.5);
-}
-
-.textarea:focus {
-    outline: none;
-    border: 3px solid var(--text-color);
-    border-radius: 5px;
-}
-
-::placeholder {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    line-height: 30px;
-    font-family: Monocraft;
-    font-size: 25px;
-    color: var(--placeholder);
-
-}
-
-button, .sign-up {
-    user-select: none;
-    border: none;
-    font-family: Monocraft;
-    transition: all .3s cubic-bezier(0.07, 0.61, 0.39, 1.69);
-}
-
-button:hover, .sign-up:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px white;
-}
-
-.sign-up {
-    margin: 55px 0 30px;
-    height: 70px;
-    background-color: var(--blue);
-    color: white;
+.card-body img {
+    display: block;
+    height: auto;
     width: 100%;
-    font-size: 30px;
 }
 
-.log-in {
-    background-color: transparent;
-    color: var(--text-shadow);
-    width: 40%;
-    font-size: 30px;
+.card .card-title .title {
+    padding: 2%;
+    font-size: 25px;
+    user-select: none;
+    color: var(--text-color);
 }
 
-.log-in:hover {
-    text-shadow: 0 0 10px var(--text-shadow);
+.card .card-footer {
+    padding: 2%;
 }
-
-.sign-up:hover, .log-in:hover {
-    font-size: 35px;
-}
-
-.sign-up:active, .log-in:active {
-    font-size: 30px;
-}
-

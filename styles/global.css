@@ -14,6 +14,11 @@
     --card-color: #CAEEFF;
 }
 
+@font-face {
+    font-family: Monocraft;
+    src: url('../fonts/Monocraft.woff');
+}
+
 ul {
     list-style: none;
 }
@@ -22,3 +27,4 @@ h1, h2, h3, p, ol, figcaption, blockquote {
     margin: 0;
     padding: 0;
 }
+
