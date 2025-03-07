@@ -62,6 +62,7 @@ li:active {
 }
 
 .card {
+    position: relative;
     break-inside: avoid;
     margin-bottom: 10%;
     height: auto;
@@ -80,14 +81,38 @@ li:active {
     user-select: none;
     border-top: 5px solid var(--blue);
     border-bottom: 5px solid var(--blue);
+    transition: all .4s ease;
+}
+
+
+
+.card .card-title {
+    display: flex;
 }
 
 .card .card-title h2 {
+    align-self: center;
     font-weight: 400;
     padding: 2%;
     font-size: 25px;
     user-select: none;
     color: var(--text-color);
+}
+
+.card .card-title svg {
+    margin: 10px;
+    margin-left: auto;
+    transition: all .5s cubic-bezier(0, 0, 0.17, 1.67);
+    cursor: pointer;
+}
+
+.card .card-title svg:hover {
+    filter: drop-shadow(0 0 10px var(--text-shadow));
+    transform: scale(1.25);
+}
+
+.card .card-title svg:active {
+    transform: scale(1);
 }
 
 .card .card-footer {
@@ -121,6 +146,10 @@ li:active {
 
 li svg:hover {
     filter: drop-shadow(0 0 10px var(--text-shadow));
+}
+
+.active {
+    background-color: var(--blue);
 }
 
 @media (width >= 2100px) {
