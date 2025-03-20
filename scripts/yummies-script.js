@@ -59,6 +59,10 @@ const toHome = () => {
     window.location.href = 'index.html'
 }
 
+const toPlayer = () => {
+    window.location.href = 'videoplayer.html'
+}
+
 container.addEventListener('click', (evt) => {
     const trash = evt.target.closest('.trash');
     if (trash) {

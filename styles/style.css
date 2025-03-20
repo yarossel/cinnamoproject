@@ -1,6 +1,12 @@
 @import url('global.css');
 @import url('nav.css');
 @import url('popup.css');
+@import url('ct-style.css');
+
+:root {
+    --bg-img: url("../components/back.gif");
+    --bg-size: cover;
+}
 
 @font-face {
     font-family: Monocraft;
@@ -15,12 +21,24 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-image: url("../components/back.gif");
+    background-color: black;
+    background-image: var(--bg-img);
     background-position: center;
-    background-size: cover;
+    background-size: var(--bg-size);
     font-family: Monocraft;
     font-size: 25px;
+    transition: all .1s ease;
 }
 
+.change {
+    --bg-img: url("../components/forest.jpg");
+    --bg-size: contain;
+    nav {
+        display: none;
+    }
+    background-repeat: no-repeat;
+}
 
-
+.img-container {
+    display: none;
+}

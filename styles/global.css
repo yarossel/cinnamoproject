@@ -2,10 +2,17 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 :root {
     --blue: #8DBCFF;
+    --player-main-blue: #B8D5FF;
     --text-shadow: #5B9FFF;
     --text-color: #488BFF;
     --nav-shadow: #ACECFF;

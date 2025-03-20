@@ -1,0 +1,246 @@
+@import url('global.css');
+@import url('video-popup.css');
+
+body {
+    font-family: Monocraft;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+    width: 78%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px white;
+}
+
+aside {
+    height: 100%;
+    width: 22%;
+    background-color: var(--player-main-blue);
+}
+
+header {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 40px;
+    padding: 5px 15px;
+    background-color: var(--player-main-blue);
+}
+
+.playlist-title {
+    align-self: center;
+    color: white;
+    text-shadow: 0 0 10px white;
+    margin: 0px 10px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+header .add-new {
+    margin-left: auto;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0, 0, 0.17, 1.67);
+}
+
+header .add-new img {
+    width: 50px;
+    height: 50px;
+}
+
+header .add-new img:hover {
+    transform: scale(1.2);
+}
+
+header .add-new img:active {
+    transform: scale(1);
+}
+
+main .player-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main .player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10%;
+}
+
+main .player img {
+    width: 60px;
+    height: 60px;
+}
+
+main .player .play img {
+    width: 70px;
+    height: 70px;
+}
+
+main .player .fullscreen img {
+    width: 40px;
+    height: 40px;
+}
+
+main .player video {
+    width: 30vw;
+    height: auto;
+    object-fit: cover;
+}
+
+main .player .seekbar {
+    -webkit-appearance: none;
+    margin: 20px 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--player-main-blue);
+    box-shadow: 0 0 10px var(--player-main-blue);
+    cursor: pointer;
+}
+
+main .player .seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 5px solid #CFE2FF;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--blue);
+}
+
+main .player .controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+main .player .controls .volume {
+    display: flex;
+    align-items: center;
+}
+
+main .player .controls .control {
+    position: relative;
+    top: 0;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 70px;
+    background-color: var(--player-main-blue);
+}
+
+footer .title {
+    margin: 0;
+}
+
+footer .title h2 {
+    font-size: 35px;
+}
+
+footer #current-time {
+    margin-left: auto;
+    font-size: 30px;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    transform: scale(1.2);
+    transition: all .5s cubic-bezier(0, 0, 0.17, 1.67);
+}
+
+main .player button:active {
+    transform: scale(1);
+}
+
+aside {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+aside .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+aside .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    height: 150px;
+    overflow: hidden;
+    margin: 15px;
+    background-color: white;
+    transition: all .5s ease;
+}
+
+aside .card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+aside .card:hover .footer {
+    opacity: 100;
+    bottom: 0px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--blue);
+}
+
+aside .card .footer {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    opacity: 0;
+    width: 100%;
+    border-top: 1px solid white;
+    background-color: var(--player-main-blue);
+    z-index: 2;
+    align-self: flex-end;
+}
+
+aside .card .footer .title {
+    color: white;
+    margin: 5px 10px;
+    text-shadow: 0 0 10px white;
+}
+
+aside .card .card-video {
+    display: block;
+    z-index: 1;
+    max-width: 290px;
+    height: 150px;
+}
+
+

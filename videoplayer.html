@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="styles/player.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <main>
+        <header>
+            <h1 class="playlist-title"> Sailor Moon</h1>
+            <button id="addNewVideo" class="add-new">
+                <img src="components/add.png" alt="add new">   
+            </button>                                   
+        </header>
+        <div class="player-container">
+            <div class="player">
+                <div id="videoContainer">
+                    <video id="video">
+                        <source src="https://video.sibnet.ru/v/4a45864852976cb212477e0f1e8992ce/2646361.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <input id="seekbar" class="seekbar" type="range" min="0" max="100" value="0" step="1">
+                <div class="controls">
+                    <div class="volume">
+                        <img src="components/volume.png" alt="volume">
+                        <input type="range" id="volume" class="seekbar" min="0" max="1" value="1" step="0.1">
+                    </div>
+                    <div class="control">
+                        <button id="previous" class="previous">
+                            <img src="components/prev.png" alt="previous">
+                        </button>
+                        <button id="play" class="play">
+                            <img src="components/play.png" alt="play">
+                        </button>
+                        <button id="next" class="next">
+                            <img src="components/next.png" alt="next">                                        
+                        </button>
+                    </div>
+                    <button id="full-screen" class="fullscreen">
+                        <img src="components/fullscreen.png" alt="full screen">                    
+                    </button>
+                </div>
+            </div>
+            <div class="timeline"></div>
+            <footer id="videoFooter">
+                <div class="title">
+                    <h2 class="playlist-title">Sailor Moon -- episode 1</h2>
+                </div>
+                <span id="current-time" class="playlist-title">00:00</span>
+            </footer>
+        </div>
+    </main>
+    <aside>
+        <div class="card-container" id="cardsForm">
+            <template id="videoCardTemplate">
+                <div class="card">
+                    <div class="card-video">
+                        <img src="images/stars.jpg" alt="">
+                    </div>
+                    <div class="footer" id="footer">
+                        <h2 class="title">episode 1</h2>
+                    </div>
+                </div>
+        </template>
+        </div>
+    </aside>
+
+
+    <!-- popup -->
+    <div class="popup" id="popup">
+        <div class="header">
+            <h2 class="title">Add new video</h1>
+            <button class="close" id="closeAddVideo">X</button>
+        </div>
+        <form class="body" id="addVideoForm">
+            <input class="textarea" type="text" placeholder="Title" id="userVideoTitle">
+            <input class="textarea" type="text" placeholder="URL" id="userVideoUrl">
+            <input type="submit" class="ok" value="OK">
+        </form>
+    </div>
+    <!-- popup -->
+
+    <script src="scripts/player.js"></script>
+</body>
+</html>
